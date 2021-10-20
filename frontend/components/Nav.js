@@ -1,14 +1,21 @@
 import Link from 'next/link';
 
 function Nav() {
-  return (
-    <nav>
-      <Link href="/products">Products</Link>
-      <Link href="/sell">Sell</Link>
-      <Link href="/orders">Orders</Link>
-      <Link href="/account">Account</Link>
-    </nav>
-  );
+  const p = [
+    { href: '/products', label: 'Products' },
+    { href: '/sell', label: 'Sell' },
+    { href: '/orders', label: 'Orders' },
+    { href: '/account', label: 'Account' },
+  ];
+
+  function m(link) {
+    return (
+      <Link key={link.href} href={link.href}>
+        {link.label}
+      </Link>
+    );
+  }
+  return <nav>{p.map(m)}</nav>;
 }
 
 export default Nav;

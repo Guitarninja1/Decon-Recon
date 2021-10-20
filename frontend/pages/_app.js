@@ -2,10 +2,12 @@
 import PropTypes from 'prop-types';
 import Page from '../components/Page';
 
-function MyApp({ Component, pageProps }) {
+function MyApp(ham) {
+  const p = ham.pageProps;
+  const C = ham.Component;
   return (
     <Page>
-      <Component {...pageProps} />
+      <C {...p} />
     </Page>
   );
 }

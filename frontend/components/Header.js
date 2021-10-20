@@ -32,14 +32,16 @@ const HeaderStyles = styled.header`
 `;
 
 function Header() {
+  const b = 'bar';
+  const sb = 'sub-bar';
   return (
     <HeaderStyles>
-      <div className="bar">
+      <div className={b}>
         <Logo>
           <Link href="/">Sick fits</Link>
         </Logo>
       </div>
-      <div className="sub-bar">
+      <div className={sb}>
         <p>Search</p>
       </div>
       <Nav />
