@@ -9,9 +9,15 @@ const rcs = 'routeChangeStart';
 const rcc = 'routeChangeComplete';
 const rce = 'routeChangeError';
 const re = Router.events;
-re.on(rcs, () => NProgress.start())
-re.on(rcc, () => NProgress.done())
-re.on(rce, () => NProgress.done())
+function s() {
+  NProgress.start()
+}
+function d() {
+  NProgress.done()
+}
+re.on(rcs, s)
+re.on(rcc, d)
+re.on(rce, d)
 
 
 function MyApp(ham) {
