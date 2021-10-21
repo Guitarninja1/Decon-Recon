@@ -7,14 +7,17 @@ class MyDocument extends Document {
     const sheet = new ServerStyleSheet();
     const page = h(
       function (App) { 
-        return function (props) { 
+        function p(props) { 
           const a = <App {...props} />
-          return sheet.collectStyles(a)
+          const b = sheet.collectStyles(a)
+          return b
         }
+        return p
       }
     );
     const styleTags = sheet.getStyleElement();
-    return { ...page, styleTags };
+    const z = { ...page, styleTags };
+    return z;
   };
   render() {
     return (
