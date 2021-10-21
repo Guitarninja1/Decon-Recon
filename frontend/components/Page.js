@@ -1,18 +1,16 @@
 import PropTypes from 'prop-types';
 import Header from './Header';
 
-function Page(bone) {
-  const C = bone.children;
+function Page({ children }) {
   return (
     <div>
       <Header />
       <h1>Page Component</h1>
-      {C}
+      {children}
     </div>
   );
 }
 Page.propTypes = {
-  // eslint-disable-next-line react/no-unused-prop-types
   children: PropTypes.node,
 };
 export default Page;

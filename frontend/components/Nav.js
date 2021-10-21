@@ -7,15 +7,15 @@ function Nav() {
     { href: '/orders', label: 'Orders' },
     { href: '/account', label: 'Account' },
   ];
-
-  function m(link) {
-    return (
-      <Link key={link.href} href={link.href}>
-        {link.label}
-      </Link>
-    );
-  }
-  return <nav>{p.map(m)}</nav>;
+  return (
+    <nav>
+      {p.map((link) => (
+        <Link key={link.href} href={link.href}>
+          {link.label}
+        </Link>
+      ))}
+    </nav>
+  );
 }
 
 export default Nav;
