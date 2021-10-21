@@ -48,18 +48,17 @@ const InnerStyles = styled.div`
   margin: 0 auto;
   padding: 2rem;
 `;
-function Page(bone) {
-  const C = bone.children;
+
+function Page({ children }) {
   return (
     <div>
       <GlobalStyles/>
       <Header />
-      <InnerStyles>{C}</InnerStyles>
+      <InnerStyles>{children}</InnerStyles>
     </div>
   );
 }
 Page.propTypes = {
-  // eslint-disable-next-line react/no-unused-prop-types
   children: PropTypes.node,
 };
 export default Page;
