@@ -9,9 +9,16 @@
     "seed-data": "keystone-next --seed-data"
   },
   "eslintConfig": {
-    "extends": "wesbos/typescript.js",
+    "extends": [
+      "wesbos/typescript.js",
+      "plugin:prettier/recommended"
+    ],
     "rules": {
-      "@typescript-eslint/no-unsafe-assignment": 0
+      "@typescript-eslint/no-unsafe-assignment": 0,
+      "quotes": "off",
+      "@typescript-eslint/quotes": [
+        "off"
+      ]
     }
   },
   "babel": {
@@ -35,6 +42,8 @@
     ]
   },
   "dependencies": {
+    "@graphql-tools/merge": "^8.2.0",
+    "@graphql-tools/schema": "^8.3.0",
     "@keystone-next/admin-ui": "^8.0.1",
     "@keystone-next/auth": "^14.0.0",
     "@keystone-next/cloudinary": "^2.0.9",
@@ -51,6 +60,7 @@
     "stripe": "^8.130.0"
   },
   "devDependencies": {
+    "@types/node": "^16.11.2",
     "@typescript-eslint/eslint-plugin": "^4.9.0",
     "@typescript-eslint/parser": "^4.9.0",
     "babel-eslint": "^10.1.0",
