@@ -7,6 +7,7 @@ class MyDocument extends Document {
     const sheet = new ServerStyleSheet();
     const page = h(function (App) {
       return function (props) {
+        // eslint-disable-next-line react/jsx-props-no-spreading
         const a = <App {...props} />;
         return sheet.collectStyles(a);
       };
