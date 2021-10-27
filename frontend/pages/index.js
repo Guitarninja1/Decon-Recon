@@ -1,9 +1,5 @@
-function IndexPage() {
-  return (
-    <div>
-      <h1>Hello</h1>
-    </div>
-  );
-}
+import ProductsPage from './products';
 
-export default IndexPage;
+export default ProductsPage;
+
+// export {default} from './products';

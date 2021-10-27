@@ -20,7 +20,6 @@ function MyApp(ham) {
   const p = ham.pageProps;
   const C = ham.Component;
   const a = ham.apollo;
-  console.log(a);
   return (
     <ApolloProvider client={a}>
       <Page>
