@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NavStyles from './styles/NavStyles';
 
 function Nav() {
   const p = [
@@ -15,7 +16,7 @@ function Nav() {
       </Link>
     );
   }
-  return <nav>{p.map(m)}</nav>;
+  return <NavStyles>{p.map(m)}</NavStyles>;
 }
 
 export default Nav;
