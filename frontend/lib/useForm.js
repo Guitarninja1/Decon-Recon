@@ -14,16 +14,19 @@ function useForm(initial = {}) {
       etv = parseInt(etv);
     }
     if (tf) {
-      etv[0] = etf;
+      [etv] = etf;
     }
-    setInputs({ ...inputs, [etn]: etv });
+    setInputs({
+      ...inputs,
+      [etn]: etv,
+    });
   }
   function resetForm() {
     setInputs(initial);
   }
   function clearForm() {
     function ham(i) {
-      const key = i[0];
+      const key = i;
       return [key, ''];
     }
     const oei = Object.entries(inputs);
